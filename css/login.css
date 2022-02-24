@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection{
+  display: block;
+}
+
+body {
+  background-color: #072a70;
+  width: 100%;
+  height: 100%vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 850px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.212);
+}
+
+.container > h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: arial;
+}
+
+.h1 {
+  width: 70%;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1-contido{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.h1-contido > p{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.logo{
+  width: 50px;
+}
+
+
+.container-form {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  width:70%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.imagem{
+  height: 100%;
+  width: 50%;
+}
+
+input[type="submit"] {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 370px;
+  background-color:#FEBD11;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  transition:  0.5s ease;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #fCDA43;
+}
+
+.cadastro{
+  margin-top: 1rem;
+  margin-left: 5px;
+}
+
+.side-img{
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px ;
+  border-bottom-right-radius: 5px;
+}
+
+h2{
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/*Estilos do formulário*/
+
+.container_input			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input 		{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:350px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL  */
+label
+{
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* ATIVO */
+input:focus ~ label, input:valid ~ label 		
+{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BARRA INFERIOR */
+.bar 	
+{ position:relative; 
+  display:block; 
+  width:300px; 
+}
+
+.bar:before, .bar:after 	
+{
+  content:'';
+  height:1px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+
+.bar:before 
+{
+  left:50%;
+}
+
+
+.bar:after 
+{
+  right:28%; 
+}
+
+/* ATIVO */
+input:focus ~ .bar:before, input:focus ~ .bar:after 
+{
+  width:71.5%;
+}
+
+/* HIGHLIGHTER  */
+.highlight 
+{
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* ATIVO */
+input:focus ~ .highlight 
+{
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMAÇÕES */
+@-webkit-keyframes inputHighlighter 
+{
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+@-moz-keyframes inputHighlighter 
+{
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+@keyframes inputHighlighter 
+{
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+.spanzinho
+{
+  margin-top: 2rem;
+  font-weight: 600;
+  width: 300px;
+}
+
+.spanzinho > a
+{
+  text-decoration: none;
+  color: black;
+}
+.spanzinho >a:hover
+{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 890px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .container {
+    box-shadow: none;
+    min-width: 300px;
+    width: 100vw;
+  }
+
+  .imagem{
+    display: none;
+  }
+
+  .h1{
+    text-align: center;
+  }
+
+  .h1 > h2{
+    font-size: 2rem;
+  }
+
+  .h1-contido{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h1-contido > p{
+    padding-right: 10px;
+  }
+
+  h2{
+    visibility: hidden;
+  }
+
+  .spanzinho{
+    padding: 2rem;
+  }
+  
+}

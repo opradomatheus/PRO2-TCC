@@ -1,0 +1,128 @@
+<?php
+
+if (isset($_POST['submit'])) 
+{
+
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    $senha = $_POST['senha'];
+
+    $result = mysqli_query(
+        $conexao,
+        "INSERT INTO 
+        prado_usuarios 
+        (
+        nome,
+        cpf, 
+        email,
+        celular,
+        senha
+        ) 
+
+        VALUES   
+        (
+        '$nome',
+        '$cpf', 
+        '$email', 
+        '$celular', 
+        '$senha'
+        )"
+    );
+
+
+    if(!$conexao){
+      echo "erro!";
+    }
+    else
+    { 
+      header('Location: login.php');
+    }
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content=" #00246C">
+    <link rel="stylesheet" href="css/cadastro.css" />
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <title>Rotary Club - Lorem ipsum dolor.</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="h1">
+        <div class="h1-contido">
+          <p>Rotary</p>
+          <a href="index.php"><img class="logo" src="img/logo.png" alt=""></a>
+        </div>
+        
+        <p>Cadastre-se</p>
+      </div>
+
+      <div class="container-form">
+
+        <form name="cadastro" action="cadastro.php" method="POST">
+          
+      <div class="group">      
+        <input name="nome" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Nome completo</label>
+      </div>
+      
+    <div class="group">      
+      <input name="cpf" type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>CPF</label>
+    </div>
+
+    <div class="group">      
+      <input name="email" type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>E-mail</label>
+    </div>
+
+    <div class="group">      
+      <input name="celular" type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Celular</label>
+    </div>
+
+    <div class="group">      
+      <input name="senha" type="password" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Senha</label>
+    </div>
+
+
+          
+
+          <input 
+          name="submit" 
+          type="submit" 
+          value="Cadastrar" 
+          />
+
+        </form>
+
+        <a 
+        href="login.php">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        
+      </div>
+    </div>
+  </body>
+</html>
