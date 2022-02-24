@@ -1,50 +1,3 @@
-<?php
-
-if (isset($_POST['submit'])) 
-{
-
-    include_once('config.php');
-
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $senha = $_POST['senha'];
-
-    $result = mysqli_query(
-        $conexao,
-        "INSERT INTO 
-        prado_usuarios 
-        (
-        nome,
-        cpf, 
-        email,
-        celular,
-        senha
-        ) 
-
-        VALUES   
-        (
-        '$nome',
-        '$cpf', 
-        '$email', 
-        '$celular', 
-        '$senha'
-        )"
-    );
-
-
-    if(!$conexao){
-      echo "erro!";
-    }
-    else
-    { 
-      header('Location: login.php');
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -61,7 +14,7 @@ if (isset($_POST['submit']))
       <div class="h1">
         <div class="h1-contido">
           <p>Rotary</p>
-          <a href="index.php"><img class="logo" src="img/logo.png" alt=""></a>
+          <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
         </div>
         
         <p>Cadastre-se</p>
@@ -69,7 +22,7 @@ if (isset($_POST['submit']))
 
       <div class="container-form">
 
-        <form name="cadastro" action="cadastro.php" method="POST">
+        <form>
           
       <div class="group">      
         <input name="nome" type="text" required>
@@ -118,7 +71,7 @@ if (isset($_POST['submit']))
         </form>
 
         <a 
-        href="login.php">
+        href="login.html">
           <i class="fas fa-arrow-left"></i>
         </a>
         
