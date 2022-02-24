@@ -22,10 +22,10 @@
         <div class="nav__menu" id="nav-menu">
 
         <ul class="nav__list">
-          <li class="nav__item"><a  href="">Home</a></li>
-          <li class="nav__item"><a  href="">Serviços</a></li>
-          <li class="nav__item"><a  href="">Quem somos</a></li>
-          <li class="nav__item"><a  href="">Contato</a></li>
+          <li class="nav__item"><a  href="#scroll-home">Home</a></li>
+          <li class="nav__item"><a  href="#scroll-quem-somos">Quem somos</a></li>
+          <li class="nav__item"><a  href="#scroll-servicos">Serviços</a></li>
+          <li class="nav__item"><a  href="#scroll-contato">Contato</a></li>
         </ul>
 
       <button
@@ -46,29 +46,20 @@
 
     </header>
 
-    <div>
+    <section id="scroll-home" class="home">
+
+    <div class="fundo">
     <h1 class="fundo-h1">Rotary Club</h2>
     <p class="fundo-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-    <img class="fundo" src="img/HD6yQB.png" alt="foto_de_fundo" />
     </div>
 
-    <div class="gradient">
-
-    </div>
+    </section>
 
     <main>
-      <section class="servicos">
-       
-      <h2 class="titulo-area">Serviços</h2>
-
-      <div class="grid-servicos">
-
-      </div>
-
-      </section>
+      
      
 
-      <section class="quem_somos">
+      <section id="scroll-quem-somos" class="quem_somos">
 
       <h2 class="titulo-area">Quem somos</h2>
         
@@ -76,7 +67,17 @@
      
       </section>
 
-      <section class="contato">
+      <section id="scroll-servicos" class="servicos">
+       
+        <h2 class="titulo-area">Serviços</h2>
+  
+        <div class="grid-servicos">
+  
+        </div>
+  
+        </section>
+
+      <section id="scroll-contato" class="contato">
 
       <h2 class="titulo-area">Contato</h2>
         
@@ -85,6 +86,10 @@
       </section>
     </main>
 
+
+
+
+
     <footer>
 
   
@@ -92,13 +97,6 @@
     </footer>
 
 <script src="js/index.js"></script>
-<script src="https://unpkg.com/scrollreveal">
-
-function ola(){
-
-ScrollReveal().reveal(".servicos")
-
-}
 
 </script>
   
