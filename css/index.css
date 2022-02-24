@@ -152,7 +152,7 @@ a:hover
 
 /* Conteudo do site */
 
-.fundo 
+/* .fundo 
 {
   width: 100%;
   min-height: 100vh;
@@ -162,7 +162,7 @@ a:hover
   background-image: url(../img/bck-rbd.jpg);
   background-position: left center;
   background-size: cover;
-  
+
 }
 
 .fundo-h1 
@@ -188,25 +188,40 @@ a:hover
   font-family: "Ubuntu", "san-serifs";
 
   color: white;
+} */
+
+
+section.home
+{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-image: url(../img/bck-rbd.jpg);
+  background-position: left center;
+  background-size: cover;
 }
+
+
 
 /* Serviços */
 
-.servicos 
+section.servicos 
 {
   min-height: 100vh;
   width: 100%;
   padding-top: var(--header-height);
 }
 
-.quem_somos 
+section.quem_somos 
 {
   min-height: 100vh;
   width: 100%;
   padding-top: var(--header-height);
 }
 
-.contato 
+section.contato 
 {
   min-height: 100vh;
   width: 100%;
