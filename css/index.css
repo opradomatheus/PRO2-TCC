@@ -92,7 +92,7 @@ header
   color: #ffffff;
 } */
 
-ul > li 
+.nav__list  li 
 {
   list-style: none;
   display: inline-block;
@@ -103,7 +103,7 @@ li > a
   padding: 20px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -287,21 +287,6 @@ footer
 
 @media screen and (max-width: 1250px)
 {
-  .fundo-h1
-  {
-    font-size: 4.8rem;
-    text-align: center;
-    width: 100%;
-  }
-
-  .fundo-p
-  {
-    margin-top: -20px;
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-  }
-
   
 }
 
@@ -376,7 +361,7 @@ footer
 
   .nav__item  a 
   {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .nav__link 

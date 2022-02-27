@@ -51,3 +51,13 @@ function linkAction(){
 }
 
 
+
+function removeMenu()
+{
+  
+  const navMenu = document.getElementById('nav-menu')
+  navMenu.classList.remove('show')
+
+}
+
+
