@@ -12,7 +12,7 @@
 
 /* Variavéis de estilo */
 
-/* cores */
+/* Cores */
 
 :root  
 { 
@@ -22,11 +22,12 @@
 }
 
 
-/* tamanhos */
+/* Tamanhos */
 
 :root
 {
-  --header-height: 60px;
+  --header-height: 65px;
+  --section-padding-top: 85px;
 }
 
 
@@ -51,28 +52,28 @@ header
   z-index: 999;
   transition: 0.4s ease;
 
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--3color);
 
+  box-shadow: 0px 0px 10px #00000098;
 }
 
-.menuFixo 
+/* .menuFixo 
 {
   position: fixed;
   top: 0px;
   background-color: var(--3color);
-}
+} */
 
 .uhlogo 
 {
   display: flex;
+  align-items: center;
 }
 
 .logo
 {
-  width: 60px;
-  height: 50px;
+  width: 40px;
+  height: 35px;
   margin-right: 5rem;
 }
 
@@ -81,15 +82,15 @@ header
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   padding-right: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--1color);
 }
 
-.logoFixo 
+/* .logoFixo 
 {
   font-weight: 600;
   color: #ffffff;
-}
+} */
 
 ul > li 
 {
@@ -117,16 +118,16 @@ a:hover
 
 .entrar 
 {
-  width: 190px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   margin-left: 5rem;
-  background-color: #00246c;
+  background-color: var(--2color);
   font-size: 1rem;
   font-weight: 600;
   outline: none;
   border: none;
   border-radius: 50px;
-  color: var(--2color);
+  color: var(--3color);
   transition: 0.5s;
 }
 
@@ -134,10 +135,10 @@ a:hover
 {
   transform: scale(1.1);
   cursor: pointer;
-  background-color: #031a47;
+  background-color: var(--2color);
 }
 
-.entrarFixo 
+/* .entrarFixo 
 {
   transition: 0.5s;
   background-color: var(--2color);
@@ -148,7 +149,7 @@ a:hover
 {
   background-color: #f7c02a;
   color: var(--3color);
-}
+} */
 
 .fa-sign-in-alt 
 {
@@ -196,6 +197,13 @@ a:hover
 } */
 
 
+
+section
+{
+  padding-top: var(--section-padding-top);
+}
+
+
 section.home
 {
   width: 100%;
@@ -209,44 +217,53 @@ section.home
  background-size: cover;
 }
 
-
-
-/* Serviços */
-
 section.servicos 
 {
   min-height: 100vh;
   width: 100%;
-  padding-top: var(--header-height);
 }
 
 section.quem_somos 
 {
   min-height: 100vh;
   width: 100%;
-  padding-top: var(--header-height);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.p-quem-somos
+{
+  padding-top: 50px;
+  font-size: 24px;
+  width: 50%;
+
+  align-self: center;
+
+  text-indent: 0.5em;
+
+}
+
+
+.p-quem-somos::first-letter
+{
+  text-transform: uppercase;
 }
 
 section.contato 
 {
   min-height: 100vh;
   width: 100%;
-  padding-top: var(--header-height);
 }
 
 .titulo-area
- {
+{
   text-align: center;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-family: 'Bebas Neue', 'cursive';
 }
 
-.grid-servicos 
-{
-  display: grid;
-  width: 100%;
-}
 
 /* FOOTER  */
 
@@ -294,39 +311,38 @@ footer
   header 
   {
     justify-content: space-around;
-    height: 70px;
+    height: 55px;
+  }
+
+
+  section
+  {
+    padding-top: var(--section-padding-top);
+  }
+
+
+  .p-quem-somos
+  {
+    width: 70%;
   }
 
   .titulo-area
   {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .logo
   {
     margin-top: 5px;
-    height: 45px;
-    width: 50px;
+    height: 35px;
+    width: 40px;
   }
   
   .txlogo
   {
     margin-left: -2rem;
-  }
+    font-size: 1.4em;
 
-  .fundo-h1
-  {
-    font-size: 3.5rem;
-    text-align: center;
-    width: 100%;
-  }
-
-  .fundo-p
-  {
-    margin-top: -30px;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: center;
   }
 
   .nav__menu 
@@ -336,7 +352,7 @@ footer
     align-items: center;
     font-size: 1.2rem;
     position: fixed;
-    top: 70px;
+    top: 55px;
     right: -100%;
     width: 100%;
     height: 100vh;
@@ -388,16 +404,12 @@ footer
   {
     margin-right: -2rem; 
     margin-top: 5px;
-    color: var(--color2);
-    font-size: 2rem;
+    color: var(--1color);
+    font-size: 1.5rem;
     cursor: pointer;
   }
 
-  .burgerFixo
-  {
-      color: #ffffff;
-  }
-
+ 
   .nav__list 
   {
     display: flex;
@@ -456,6 +468,7 @@ footer
     align-items: center;
   }
 }
+
 @media screen and (max-width: 430px)
 {
   header
@@ -471,21 +484,6 @@ footer
   .nav__toggle 
   {
     margin-right: -1rem;
-}
-
-.fundo-h1
-{
-  font-size: 2.5rem;
-  text-align: center;
-  width: 100%;
-}
-
-.fundo-p
-{
-  margin-top: -30px;
-  font-size: 0.8rem;
-  width: 60%;
-  text-align: center;
 }
 
 }
@@ -507,19 +505,5 @@ footer
     margin-right: 5px;
 }
 
-.fundo-h1
-{
-  font-size: 2.5rem;
-  text-align: center;
-  width: 100%;
-}
-
-.fundo-p
-{
-  margin-top: -30px;
-  font-size: 0.8rem;
-  width: 90%;
-  text-align: center;
-}
 }
 
