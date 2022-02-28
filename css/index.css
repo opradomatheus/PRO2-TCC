@@ -449,6 +449,30 @@ footer
   {
     right: 0;
   }
+
+
+  .container-quem-somos
+  {
+    flex-direction: column;
+  
+    padding-top: 20px;
+  }
+  
+  .img-quem-somos
+  {
+    width: 350px;
+    height: 350px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .p-quem-somos
+  {
+    width: 80%;
+    font-size: 16px;
+  }
+
+
 }
 
 @media screen and (min-width: 1050px) 
@@ -510,7 +534,7 @@ footer
 {
   width: 350px;
   height: 350px;
-  margin-right: none;
+  margin-right: 0;
   margin-bottom: 20px;
 }
 
