@@ -55,6 +55,10 @@ header
   background-color: var(--3color);
 
   box-shadow: 0px 0px 10px #00000098;
+  border-bottom: 3px solid var(--2color);
+
+  user-select: none; /* Chrome */
+  -webkit-user-select: none; /*Safari*/
 }
 
 /* .menuFixo 
@@ -113,6 +117,7 @@ a:hover
 {
   color: #FEBD11;
 }
+
 
 /* Botão para efetuar o login*/
 
@@ -209,19 +214,13 @@ section.home
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
 
-  background-image: url(../img/bck-rbd.jpg);
-  background-position: left center;
+  background-image: url(../img/rotary-people.png);
+  background-position: center center;
 
- background-size: cover;
+  background-size: cover;
 }
 
-section.servicos 
-{
-  min-height: 100vh;
-  width: 100%;
-}
 
 section.quem_somos 
 {
@@ -234,10 +233,184 @@ section.quem_somos
 }
 
 
-section.contato 
+section.servicos 
 {
   min-height: 100vh;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.c-servicos
+{
+
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.img-cr
+{
+  width: 50%;
+}
+
+.img-cr img
+{
+  height: 80vh;
+  position: relative;
+  z-index: 3;
+}
+
+  .forma
+  {
+    position: absolute;
+
+    width: 500px;
+    height: 600px;
+
+    background-color: var(--3color);
+
+    z-index: 2;
+
+    border-radius: 0 50% 50% 0;
+  }
+
+.txt-cr
+{
+  width: 50%;
+
+  display: flex;
+}
+
+.txt-cr p
+{
+  align-self: center;
+
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 100%;
+
+  padding-right: 100px;
+
+  letter-spacing: 1px;
+}
+
+
+.c2-servicos
+{
+
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.forma2
+{
+  position: absolute;
+
+  width: 500px;
+  height: 600px;
+
+  background-color: var(--2color);
+
+  z-index: 2;
+
+  border-radius: 50% 0 0 50%;
+}
+
+.img-cr2
+{
+  width: 50%;
+}
+
+.img-cr2 img
+{
+  height: 80vh;
+  position: relative;
+  z-index: 3;
+
+  left: 100px;
+
+  transform: rotateY(180deg);
+}
+
+
+.txt-cr2
+{
+  width: 50%;
+
+  display: flex;
+}
+
+.txt-cr2 p
+{
+  align-self: center;
+
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 100%;
+
+  letter-spacing: 1px;
+
+  margin-top: -50px;
+ margin-left: 100px;
+}
+
+
+section.emprestimo
+{
+  min-height: 95vh;
+  width: 100%;
+
+}
+
+.container-cards
+{
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.card-one,
+.card-two,
+.card-three
+{
+  width: 350px;
+  height: 500px;
+
+  background-color: green;
+
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+}
+
+.card-one:hover
+{
+  cursor: pointer;
+}
+
+.card-two:hover
+{
+  cursor: pointer;
+}
+
+.card-three
+{
+  cursor: pointer;
 }
 
 .titulo-area
@@ -249,17 +422,142 @@ section.contato
 }
 
 
-/* FOOTER  */
 
-footer 
+/* Seção do footer da página */
+
+footer
 {
-  background-color: var(--2color);
-  height: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    padding-top: 50px;
+    background-color: var(--2color);
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Footer do meio */
+
+.top-footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+}
+
+.top-footer1
+{
+    width: 500px;
+    padding-left: 200px;
+}
+
+.top-logo-footer
+{
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+    color: var(--3color);
+
+    padding: 40px 0px 20px 0px;
+
+    cursor: pointer;
+}
+
+.p-footer
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--3color);
+
+
+/* Espaçamento na parte inferior */
+
+    padding-bottom: 20px;
+}
+
+
+.fa-phone-alt,
+.fa-envelope,
+.fa-clock
+{
+    color: var(--3color);
+    padding-right: 10px;
+}
+
+
+
+.top-footer2
+{
+    width: 400px;
+}
+
+.top2-redes
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--3color);
+
+    padding: 40px 0px 20px 0px;
+}
+
+.top2-redes-container
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-twitter
+{
+    font-size: 48px;
+    color: var(--3color);
+    padding: 0px 20px 0px 0px;
+}
+
+.fa-instagram:hover
+{
+     color: #050535;
+     transition: 0.3s ease;
+}
+
+.fa-facebook:hover
+{
+    color: #050535;
+    transition: 0.3s ease;
+}
+
+.fa-twitter:hover
+{
+    color: #050535;
+    transition: 0.3s ease;
+}
+
+
+
+/* Parte de baixo do footer */
+
+.b-footer
+{
+    width: 100%;
+    height: 20% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.p-b-footer
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--3color);
 }
 
 

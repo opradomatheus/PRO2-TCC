@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
-* {
+* 
+{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,7 +30,7 @@ body {
   width: 500px;
   height: 750px;
   background-color: rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.212);
 }
 
@@ -84,10 +86,12 @@ input[type="submit"] {
   height: 50px;
   width: 370px;
   background-color: #FEBD11;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 1.3rem;
   transition: 0.5s ease;
+
+  border-radius: 10px;
 }
 
 input[type="submit"]:hover {
