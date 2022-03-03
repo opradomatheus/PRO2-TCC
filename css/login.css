@@ -19,6 +19,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.seta{
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
 .container {
   margin: 0;
   position: absolute;

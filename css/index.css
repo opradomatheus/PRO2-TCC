@@ -367,12 +367,33 @@ section.servicos
 
 section.local
 {
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
 
   display: flex;
   flex-direction: column;
 
+  background-color: rgb(255, 255, 255);
+
+  position: relative;
+}
+
+.local-container
+{
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.local-container iframe
+{
+  padding-bottom: 0px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.435);
 }
 
 
@@ -390,7 +411,6 @@ section.local
 
 footer
 {
-    padding-top: 50px;
     background-color: var(--2color);
     height: 350px;
     width: 100%;
