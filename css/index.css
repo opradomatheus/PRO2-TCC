@@ -436,6 +436,41 @@ footer
 }
 
 
+.scrolltop
+{
+  width: 60px;
+  height: 60px;
+
+  background-color: var(--2color);
+
+  border-radius: 50%;
+
+  position: fixed;
+  float: right;
+  bottom: 1%;
+  right: 1%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid var(--3color);
+
+}
+
+.scrolltop:hover
+{
+  cursor: pointer;
+  background-color: #ffc832;
+}
+
+#icon
+{
+  color: var(--3color);
+}
+
+
+
 
 /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
@@ -589,7 +624,7 @@ footer
 
   .top-footer1
   {
-    width: 100vw;
+    width: 100%;
     padding-left: 0;
     display: flex;
     flex-direction: column;
@@ -599,7 +634,7 @@ footer
 
   .top-footer2
   {
-    width: 100vw;
+    width: 100%;
     padding-right: 0;
     
     padding-bottom: 50px;
@@ -620,6 +655,10 @@ footer
 .fa-twitter
 {
     margin-left: 0;
+}
+
+.scrolltop{
+  visibility: hidden;
 }
 
 
@@ -654,6 +693,18 @@ footer
   }
 
 }
+
+@media screen and (max-width: 650px)
+{
+ iframe{
+   width: 400px;
+   height: 400px;
+ }
+}
+
+
+
+
 
 @media screen and (max-width: 500px)
 {
