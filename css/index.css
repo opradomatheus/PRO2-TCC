@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 * 
 {
@@ -29,6 +30,16 @@
   --header-height: 65px;
   --section-padding-top: 85px;
 }
+
+
+/* Fontes */
+
+:root 
+{
+  --f1: 'Righteous' cursive;
+}
+
+
 
 
 
@@ -316,7 +327,7 @@ footer
 
 .top-logo-footer
 {
-    font-family: 'Righteous', cursive;
+    font-family: 'Righteous' sans-serif;
     font-size: 48px;
     color: var(--3color);
 
@@ -563,28 +574,6 @@ footer
     right: 0;
   }
 
-
-  .container-quem-somos
-  {
-    flex-direction: column;
-  
-    padding-top: 20px;
-  }
-  
-  .img-quem-somos
-  {
-    width: 350px;
-    height: 350px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  
-  .p-quem-somos
-  {
-    width: 80%;
-    font-size: 16px;
-  }
 
   footer
   {
