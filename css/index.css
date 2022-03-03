@@ -87,8 +87,7 @@ header
 
 .logo
 {
-  width: 40px;
-  height: 35px;
+  width: 150px;
   margin-right: 5rem;
 }
 
@@ -222,14 +221,19 @@ section
 
 section.home
 {
+  padding-top: var(--header-height);
+
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   margin: 0;
 
   background-image: url(../img/rotary-people.png);
   background-position: center center;
 
   background-size: cover;
+
+  z-index: 1;
+
 }
 
 
@@ -396,19 +400,19 @@ footer
 
 .fa-instagram:hover
 {
-     color: #050535;
+     color: #000000;
      transition: 0.3s ease;
 }
 
 .fa-facebook:hover
 {
-    color: #050535;
+    color: #000000;
     transition: 0.3s ease;
 }
 
 .fa-twitter:hover
 {
-    color: #050535;
+    color: #000000;
     transition: 0.3s ease;
 }
 
@@ -477,7 +481,7 @@ footer
 
 
 
-@media screen and (max-width: 1050px) 
+@media screen and (max-width: 1025px) 
 {
   header 
   {
@@ -504,9 +508,7 @@ footer
 
   .logo
   {
-    margin-top: 5px;
-    height: 35px;
-    width: 40px;
+    width: 130px;
   }
   
   .txlogo
@@ -664,7 +666,7 @@ footer
 
 }
 
-@media screen and (min-width: 1050px) 
+@media screen and (min-width: 1025px) 
 {
 
 
@@ -699,6 +701,10 @@ footer
  iframe{
    width: 380px;
    height: 380px;
+ }
+
+ section.home{
+   height: 80vh!important;
  }
 }
 
