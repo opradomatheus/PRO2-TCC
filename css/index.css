@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * 
 {
@@ -37,6 +38,7 @@
 :root 
 {
   --f1: 'Quicksand', sans-serif;
+  --f2: 'Roboto Slab', serif;
 }
 
 
@@ -227,15 +229,73 @@ section.home
   height: 100vh;
   margin: 0;
 
-  background-image: url(../img/rotary-people.png);
+  /* background-image: url(../img/rotary-people.png);
   background-position: center center;
 
-  background-size: cover;
+  background-size: cover; */
 
-  z-index: 1;
+  background-color: #222a3a;
+
+  position: relative;
+}
+
+.white-logo
+{
+  position: absolute;
+
+  top: 40%;
+  left: 50%;
+
+  transform: translate(-40%, -50%);
+
+  width: 160px;
+}
+
+.home h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%); 
+
+  color: #FFC000;
+
+  font-family: var(--f2);
+  font-weight: 300;
+
+  font-size: 72px;
+
+  text-transform: capitalize;
+
 
 }
 
+.home h1 span{
+  font-size: 30px;
+
+  text-transform: lowercase;
+
+  vertical-align: middle;
+
+  font-weight: 400;
+}
+
+.home p
+{
+  color: white;
+
+  font-size: 18px;
+  font-family: var(--f2);
+  font-weight: 400;
+
+  position: absolute;
+  top: 62%;
+  left: 55%;
+
+  transform: translate(-62%, -55%);
+
+  text-align: center;
+}
 
 section.sobre
 {
@@ -257,10 +317,83 @@ section.servicos
   flex-direction: column;
 }
 
+.container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+}
+
+.box1 {
+  min-height: 100%;
+  width: 30vw;
+  background-color: rgb(255, 255, 255);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#circulo {
+
+  position: absolute;
+
+  top: -50px;
+  float: left;
+  width: 680px;
+  height: 680px;
+  margin: 20px 20px 20px 0px;
+  shape-outside: circle(50% at 30%);
+  clip-path: circle(50% at 0%);
+  background: #050388;
+
+  z-index: 1;
+}
+
+
+
+
+.box1 img {
+  position: absolute;
+  top: -10px;
+
+  height: 90%;
+  z-index: 2;
+}
+
+.box2
+{
+  padding-left: 20px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.card1,
+.card2
+{
+    width: 300px;
+    height: 400px;
+
+    background-color: greenyellow;
+    margin: 10px;
+
+    border-radius: 10px;
+}
+
+
+
+
+
 
 section.local
 {
-  min-height: 90vh;
+  min-height: 85vh;
   width: 100%;
 
   display: flex;
@@ -331,7 +464,7 @@ footer
 
 .top-logo-footer
 {
-    font-family: var(--f1);
+    font-family: 'Open sans', serif;
     font-weight: 600;
     font-size: 48px;
     color: var(--3color);
@@ -477,7 +610,40 @@ footer
 
 
 /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media screen and (max-width: 1300px)
+{
+  .container
+  {
+    flex-direction: column;
+  }
 
+  .box1{
+    display: none!important;
+    visibility: hidden;
+  }  
+  
+  
+    .box1{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box2{
+      padding-left: 0;
+      padding-top: 100px;
+      width: 100%;
+    }
+
+    .card1,
+    .card2
+    {
+      width: 380px;
+      height: 400px;
+    }
+} 
 
 
 
