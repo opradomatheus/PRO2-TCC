@@ -315,6 +315,8 @@ section.servicos
 
   display: flex;
   flex-direction: column;
+
+  background-color: var(--2color);
 }
 
 .container {
@@ -327,7 +329,7 @@ section.servicos
 .box1 {
   min-height: 100%;
   width: 30vw;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--2color);
 
   position: relative;
 
