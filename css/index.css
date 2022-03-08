@@ -366,6 +366,8 @@ section.servicos
 .box2
 {
   padding-left: 20px;
+
+  margin-top: -60px;
   width: 70vw;
   display: flex;
   justify-content: center;
@@ -384,6 +386,16 @@ section.servicos
     margin: 10px;
 
     border-radius: 10px;
+    overflow: hidden; 
+
+    background-position: center center;
+}
+
+.card1 img:hover,
+.card2 img:hover
+{
+  transition: 0.8s;
+  transform: scale(1.2);
 }
 
 
@@ -407,6 +419,7 @@ section.local
 .local-container
 {
   padding-top: 50px;
+  padding-bottom: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -829,8 +842,49 @@ footer
   visibility: hidden;
 }
 
-
 }
+
+
+
+@media screen and (max-width: 1070px) 
+{
+.home 
+h1
+{
+  font-size: 48px;
+}
+
+.home h1
+span
+{
+  font-size: 18px;
+}
+}
+
+@media screen and (max-width: 800px) 
+{
+
+  .white-logo{
+    width: 90px;
+  }
+.home 
+h1
+{
+  font-size: 30px;
+}
+
+.home h1 span
+{
+  font-size: 12px;
+}
+
+.home p
+{
+  margin-top: 10px;
+  font-size: 12px;
+}
+}
+
 
 @media screen and (min-width: 1025px) 
 {
