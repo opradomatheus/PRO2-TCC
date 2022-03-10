@@ -261,6 +261,14 @@ section.servicos
    user-select: none;         /*     Sem seleção de usuário     */
   -webkit-user-select: none; /* Safari sem seleção de usuário  */
   -moz-user-select: none;   /* Mozilla sem seleção de usuário */
+
+  position: relative;
+}
+
+section.servicos 
+h2
+{
+  font-family: var(--f1);
 }
 
 .container 
@@ -269,6 +277,7 @@ section.servicos
   width: 100%;
 
   display: flex;
+
 }
 
 .box1 
@@ -277,7 +286,6 @@ section.servicos
   width: 30vw;
   background-color: white;
 
-  position: relative;
 
   display: flex;
   flex-direction: row;
@@ -286,14 +294,13 @@ section.servicos
 
 #circulo 
 {
-
   position: absolute;
 
-  top: -100px;
   float: left;
+  top: var(--header-height);
 
-  width: 680px;
-  height: 680px;
+  width: 650px;
+  height: 650px;
   margin: 20px 20px 20px 0px;
   shape-outside: circle(50% at 30%);
   clip-path: circle(50% at 0%);
@@ -309,9 +316,9 @@ section.servicos
 img 
 {
   position: absolute;
-  top: -10px;
 
-  height: 90%;
+  top: var(--header-height);
+  height: 80%;
   z-index: 2;
 }
 
@@ -399,21 +406,21 @@ input
 
   border: none;
 
-  background-color: red;
-  color: white;
+  background-color: var(--2color);
+  color: black;
 
   transition: 0.3s ease-in;
+
+  box-shadow: inset -2px -2px rgb(0, 0, 0);
 }
 
 .crd-bottom
 input:hover
 {
-   background-color: rgb(255, 38, 38);
-    cursor: pointer;
 
-    transform: scale(1.1);
+  cursor: pointer;
 
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 2px 2px rgb(0, 0, 0);
 }
 
 
@@ -456,7 +463,9 @@ iframe
   text-align: center;
   text-transform: uppercase;
   font-size: 2.5rem;
-  font-family: 'Bebas Neue', 'cursive';
+  font-family: var(--f1);
+
+  
 }
 
 
