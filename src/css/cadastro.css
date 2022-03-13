@@ -1,13 +1,8 @@
 @charset "UTF-8";
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body 
-{
-  background-color: #072a70;
+body {
+  background-color: #072A70;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -16,113 +11,79 @@ body
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.seta
-{
-  margin-top: 20px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-}
-
-.container 
-{
+.container {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 22px;
-  width: 850px;
-  height: 600px;
+  width: 500px;
+  height: 750px;
   background-color: rgb(255, 255, 255);
+  border-radius: 20px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.212);
 }
 
-.container > h1 
-{
+.container > h1 {
   margin-bottom: 20px;
   font-size: 2em;
   font-family: arial;
 }
 
-.h1 
-{
-  width: 70%;
-  text-align: left;
+.h1 {
+  text-align: center;
   margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.h1-contido
-{
-  margin-top: 2rem;
+
+.h1-contido{
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
-.h1-contido > p
-{
+.h1-contido > p{
   font-size: 2rem;
   font-weight: 600;
 }
 
-.logo
-{
+.logo{
   width: 50px;
 }
 
 
-.container-form 
-{
-  width: 70%;
-  height: 100%;
+.container-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-form 
-{
-  margin-top: 3rem;
+form {
   align-items: center;
   justify-content: center;
-  width:70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 
-.imagem
-{
-  height: 100%;
-  width: 50%;
-
-  background-image: url(../img/rotaryCachoerinha.jpg);
-  background-size: cover;
-  background-position: center center;
-
-  border-radius: 0px 20px 20px 0px;
-}
-
 input[type="submit"] {
-  font-size: 1.5rem;
-  margin-top: -1rem;
+  margin-top: 1rem;
   outline: none;
   border: none;
   height: 50px;
   width: 370px;
-  background-color:#FEBD11;
+  background-color: #FEBD11;
   color: rgb(0, 0, 0);
   font-weight: 600;
-  transition:  0.5s ease;
+  font-size: 1.3rem;
+  transition: 0.5s ease;
 
   border-radius: 10px;
 }
@@ -132,36 +93,27 @@ input[type="submit"]:hover {
   background-color: #fCDA43;
 }
 
-.cadastro{
-  margin-top: 1rem;
-  margin-left: 5px;
+a {
+  margin-top: 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
-.side-img{
-  width: 100%;
-  height: 100%;
-  border-top-right-radius: 5px ;
-  border-bottom-right-radius: 5px;
+a:hover {
+  text-decoration: underline;
 }
 
-h2{
-  margin-top: 1rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
 
-/*Estilos do formulário*/
-
-.container_input			  
-{ 
+/* form starting stylings ------------------------------- */
+.group 			  { 
   position:relative; 
   margin-bottom:45px; 
 }
-
-
-
-input 	
-{
+input 				{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -169,18 +121,10 @@ input
   border:none;
   border-bottom:1px solid #757575;
 }
+input:focus 		{ outline:none; }
 
-
-input:focus
-{
-  outline:none; 
-}
-
-/* LABEL  */
-
-
-label
-{
+/* LABEL ======================================= */
+label 				 {
   color:#999; 
   font-size:18px;
   font-weight:normal;
@@ -193,24 +137,16 @@ label
   -webkit-transition:0.2s ease all;
 }
 
-/* ATIVO */
-
-input:focus ~ label, input:valid ~ label 		
-{
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
 }
 
-/* BARRA INFERIOR */
-.bar 	
-{ position:relative; 
-  display:block; 
-  width:300px; 
-}
-
-.bar:before, .bar:after 	
-{
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
   content:'';
   height:1px; 
   width:0;
@@ -221,28 +157,20 @@ input:focus ~ label, input:valid ~ label
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-
-
-.bar:before 
-{
+.bar:before {
   left:50%;
 }
-
-
-.bar:after 
-{
+.bar:after {
   right:28%; 
 }
 
-/* ATIVO */
-input:focus ~ .bar:before, input:focus ~ .bar:after 
-{
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:71.5%;
 }
 
-/* HIGHLIGHTER  */
-.highlight 
-{
+/* HIGHLIGHTER ================================== */
+.highlight {
   position:absolute;
   height:60%; 
   width:100px; 
@@ -252,69 +180,46 @@ input:focus ~ .bar:before, input:focus ~ .bar:after
   opacity:0.5;
 }
 
-/* ATIVO */
-input:focus ~ .highlight 
-{
+/* active state */
+input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
 
-/* ANIMAÇÕES */
-@-webkit-keyframes inputHighlighter 
-{
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
 
-
-@-moz-keyframes inputHighlighter 
-{
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-
-
-@keyframes inputHighlighter 
-{
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-
-.spanzinho
-{
-  margin-top: 2rem;
-  font-weight: 600;
-  width: 300px;
-}
-
-.spanzinho
- a
-{
-  text-decoration: none;
-  color: black;
-}
-.spanzinho
-a:hover
-{
-  text-decoration: underline;
+.fa-arrow-left{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 890px) {
-  body 
-  {
+  body {
     background-color: rgb(255, 255, 255);
   }
 
-  .container 
-  {
+  .container {
     box-shadow: none;
     min-width: 300px;
     width: 100vw;
   }
 
-  .imagem
-  {
+  .imagem{
     display: none;
   }
 
@@ -322,32 +227,16 @@ a:hover
     text-align: center;
   }
 
-  .h1 
-  h2
-  {
+  .h1 > h2{
     font-size: 2rem;
   }
 
-  .h1-contido
-  {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .h1-contido
-  p
-  {
-    padding-right: 10px;
-  }
-
-  h2
-  {
-    visibility: hidden;
-  }
-
-  .spanzinho
-  {
+  .spanzinho{
     padding: 2rem;
+  }
+
+  input[type="submit"] {
+    width: 250px;
   }
   
 }
