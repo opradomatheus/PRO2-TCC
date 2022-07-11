@@ -1,13 +1,18 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 body 
 {
-  background-color: #072a70;
+  background-color: #cac9c9;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:column;
+  gap: 15px;
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,35 +29,34 @@ body
 
 .container 
 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-radius: 22px;
+  border-radius: 5px;
   width: 850px;
   height: 600px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.212);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .container > h1 
 {
   margin-bottom: 20px;
   font-size: 2em;
-  font-family: arial;
+
 }
 
 .h1 
 {
   width: 70%;
-  text-align: left;
   margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+
+
 }
 
 .h1-contido
@@ -61,12 +65,24 @@ body
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+
 }
 
-.h1-contido > p
+.h1-contido p
 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
+  font-family: 'Carter One', cursive;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  color: #79a83b;
+}
+
+.h1 h2 {
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .logo
@@ -98,13 +114,15 @@ form
 .imagem
 {
   height: 100%;
-  width: 50%;
-
-  background-image: url(../img/rotaryCachoerinha.jpg);
+  width: 80%;
+  background-image: url(../img/old-lady-muleta.jpg);
   background-size: cover;
   background-position: center center;
-
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -ms-border-radius: 0px 10px 10px 0px;
+  -o-border-radius: 0px 10px 10px 0px;
 }
 
 input[type="submit"] {
@@ -113,18 +131,21 @@ input[type="submit"] {
   outline: none;
   border: none;
   height: 50px;
-  width: 370px;
-  background-color:#FEBD11;
-  color: rgb(0, 0, 0);
+  width: 305px;
+  background-color:#50781D;
+  color: rgb(255, 255, 255);
   font-weight: 600;
   transition:  0.5s ease;
-
-  border-radius: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 input[type="submit"]:hover {
   cursor: pointer;
-  background-color: #fCDA43;
+  background-color: #79a83b;
 }
 
 .cadastro{
@@ -160,7 +181,7 @@ input
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:350px;
+  width:304px;
   border:none;
   border-bottom:1px solid #757575;
 }
@@ -177,7 +198,7 @@ input:focus
 label
 {
   color:#999; 
-  font-size:18px;
+  font-size:14px;
   font-weight:normal;
   position:absolute;
   pointer-events:none;
@@ -194,7 +215,7 @@ input:focus ~ label, input:valid ~ label
 {
   top:-20px;
   font-size:14px;
-  color:#5264AE;
+  color:#79a83b;
 }
 
 /* BARRA INFERIOR */
@@ -211,7 +232,7 @@ input:focus ~ label, input:valid ~ label
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#5264AE; 
+  background:#79a83b; 
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -220,7 +241,7 @@ input:focus ~ label, input:valid ~ label
 
 .bar:before 
 {
-  left:50%;
+  left:30%;
 }
 
 
@@ -258,29 +279,29 @@ input:focus ~ .highlight
 /* ANIMAÇÕES */
 @-webkit-keyframes inputHighlighter 
 {
-	from { background:#5264AE; }
+	from { background:#79a83b; }
   to 	{ width:0; background:transparent; }
 }
 
 
 @-moz-keyframes inputHighlighter 
 {
-	from { background:#5264AE; }
+	from { background:#79a83b; }
   to 	{ width:0; background:transparent; }
 }
 
 
 @keyframes inputHighlighter 
 {
-	from { background:#5264AE; }
+	from { background:#79a83b; }
   to 	{ width:0; background:transparent; }
 }
 
 .spanzinho
 {
   margin-top: 2rem;
+  font-size: 0.9em;
   font-weight: 600;
-  width: 300px;
 }
 
 .spanzinho
@@ -294,6 +315,31 @@ a:hover
 {
   text-decoration: underline;
 }
+
+
+#copy{
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #50781D;
+}
+
+#copy p {
+  margin-left: 5px;
+}
+
+#copy a {
+  text-decoration: none;
+  color: #50781D;
+  margin: 10px;
+}
+
+#copy a:hover {
+  text-decoration: underline;
+}
+
 
 @media screen and (max-width: 890px) {
   body 

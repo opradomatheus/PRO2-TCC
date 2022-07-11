@@ -3,15 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 
 
 /* Variavéis de Cor */
 
 :root  
 { 
-  --1color: #dddddd;
-  --2color: #febd11;
-  --3color: #00246c;
+  --1color: #50781D;
+  --2color: #ffffff;
+  --3color: #79a83b;
 }
 
 
@@ -29,6 +31,7 @@
 {
   --f1: 'Quicksand', sans-serif;
   --f2: 'Roboto Slab', serif;
+  --f3: 'Carter one', sans-serif;
 }
 
 
@@ -48,32 +51,23 @@ header
   background-color: var(--3color);
 
   box-shadow: 0px 0px 10px #00000098;
-  border-bottom: 3px solid var(--2color);
+  border-bottom: 3px solid var(--1color);
 
   user-select: none; /* Chrome */
   -webkit-user-select: none; /*Safari*/
 }
 
 
-.uhlogo 
-{
-  display: flex;
-  align-items: center;
-}
 
-.logo
-{
-  width: 150px;
+.uhlogo p {
   margin-right: 5rem;
-}
-
-.txlogo 
-{
-  font-family: var(--f1);
+  font-size: 2.3rem;
   font-weight: 600;
-  padding-right: 0.5rem;
-  font-size: 2rem;
-  color: var(--1color);
+  font-family: 'Carter One', cursive;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  color: var(--2color);
 }
 
 
@@ -96,7 +90,7 @@ li > a
 
 a:hover
 {
-  color: #FEBD11;
+  color: var(--1color);
 }
 
 
@@ -165,19 +159,6 @@ section.home
 
 }
 
-.white-logo
-{
-  position: absolute;
-
-  top: 40%;
-  left: 50%;
-
-  transform: translate(-40%, -50%);
-
-  width: 160px;
-
-  user-select: none;
-}
 
 .home h1{
 
@@ -299,7 +280,7 @@ h2
   margin: 20px 20px 20px 0px;
   shape-outside: circle(50% at 30%);
   clip-path: circle(50% at 0%);
-  background: #050388;
+  background-color: var(--1color);
 
   z-index: 1;
 }
@@ -334,7 +315,7 @@ img
 .card2
 {
     width: 300px;
-    height: 400px;
+    height: 500px;
 
     background-color: rgb(238, 238, 238);
     margin: 10px;
@@ -349,7 +330,7 @@ img
 
 .crd-top img
 {
-  height: 250px;
+  height: 300px;
   width: 300px;
 }
 
@@ -380,33 +361,23 @@ p
   padding-top: 5px;
   text-align: center;
 
-  color: blue;
+  color: var(--3color);
 }
 
 .crd-bottom
 input
 {
-
   font-weight: 700;
   font-family: var(--f1);
-  
   margin-top: 30px;
-
-  height: 40px;
-  width: 200px;
-
+  height: 50px;
+  width: 250px;
   align-self: center;
-
-  border-radius: 50px;
-
+  border-radius: 10px;
   border: none;
+  background-color: var(--1color);
+  color: var(--2color);
 
-  background-color: var(--2color);
-  color: black;
-
-  transition: 0.3s ease-in;
-
-  box-shadow: inset -2px -2px rgb(0, 0, 0);
 }
 
 .crd-bottom
@@ -415,7 +386,6 @@ input:hover
 
   cursor: pointer;
 
-  box-shadow: inset 2px 2px rgb(0, 0, 0);
 }
 
 
@@ -469,7 +439,7 @@ iframe
 
 footer
 {
-    background-color: var(--2color);
+    background-color: var(--3color);
     height: 350px;
     width: 100%;
     display: flex;
@@ -498,10 +468,15 @@ footer
 
 .top-logo-footer
 {
-    font-family: var(--f2);
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-family: var(--f3);
     font-weight: 600;
     font-size: 48px;
-    color: var(--3color);
+    color: var(--2color);
 
     padding: 40px 0px 20px 0px;
 
@@ -513,7 +488,7 @@ footer
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: var(--3color);
+    color: var(--2color);
 
 
 /* Espaçamento na parte inferior */
@@ -526,7 +501,7 @@ footer
 .fa-envelope,
 .fa-clock
 {
-    color: var(--3color);
+    color: var(--2color);
     padding-right: 10px;
 }
 
@@ -560,26 +535,26 @@ footer
 .fa-twitter
 {
     font-size: 48px;
-    color: var(--3color);
+    color: var(--2color);
     margin-left: -10px;
     padding: 10px;
 }
 
 .fa-instagram:hover
 {
-     color: #000000;
+     color: var(--1color);
      transition: 0.3s ease;
 }
 
 .fa-facebook:hover
 {
-    color: #000000;
+    color: var(--1color);
     transition: 0.3s ease;
 }
 
 .fa-twitter:hover
 {
-    color: #000000;
+    color: var(--1color);
     transition: 0.3s ease;
 }
 
@@ -602,7 +577,7 @@ footer
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: var(--3color);
+    color: var(--2color);
     padding-bottom: 20px;
 }
 
@@ -612,7 +587,7 @@ footer
   width: 60px;
   height: 60px;
 
-  background-color: var(--2color);
+  background-color: var(--1color);
 
   border-radius: 50%;
 
@@ -624,18 +599,15 @@ footer
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border: 3px solid var(--3color);
-
 }
 
 .scrolltop:hover
 {
   cursor: pointer;
-  background-color: #ffc832;
+  background-color: var(--1color);
 }
 
 #icon
 {
-  color: var(--3color);
+  color: var(--2color);
 }

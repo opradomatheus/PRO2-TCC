@@ -6,7 +6,7 @@ Responsividade do site
 */
 
 
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1525px)
 {
   .container
   {
@@ -37,7 +37,7 @@ Responsividade do site
     .card2
     {
       width: 380px;
-      height: 400px;
+      min-height: 400px;
     }
 
     .crd-top
